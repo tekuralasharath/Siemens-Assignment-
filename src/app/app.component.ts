@@ -224,7 +224,7 @@ export class AppComponent implements OnInit {
       this.deldataSource.data.splice(index, 1);
       //this.deletedUsers.splice(index, 1);
     }
-    //this.table.renderRows();
+    this.table.renderRows();
     this.users.push(event);
     this.dataSource.data = this.users;
     this.filterSelectObj.filter((o) => {
