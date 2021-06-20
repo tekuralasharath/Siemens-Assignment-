@@ -156,6 +156,7 @@ export class AppComponent implements OnInit {
       this.table.renderRows();
       this.onReset();
       this.modalService.dismissAll();
+      alert('Successfully Saved...');
     } else if (this.buttonname == 'Update') {
       debugger;
       let editData = this.registerForm.value;
@@ -185,6 +186,7 @@ export class AppComponent implements OnInit {
       this.onReset();
       this.modalService.dismissAll();
       this.buttonname="Submit";
+      alert('Successfully Updated...');
     }
   }
   DeleteData(event) {
@@ -202,6 +204,7 @@ export class AppComponent implements OnInit {
       o.options = this.getFilterObject(this.deletedUsers, o.columnProp);
     });
     this.deldataSource.filterPredicate = this.createFilter();
+    alert('Data Deleted...');
   }
 
   Edit(longContent, event) {
@@ -232,6 +235,7 @@ export class AppComponent implements OnInit {
     });
     this.dataSource.filterPredicate = this.createFilter();
     this.delresetFilters();
+    alert('Data Restored...');
   }
 
   onReset() {
